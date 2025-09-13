@@ -1,0 +1,35 @@
+Screen:
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+
+        # Logo Section
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+            padding: dp(10)
+            Image:
+                source: "Kainmami.png"
+                size_hint_y: None
+                size: dp(35), dp(35)
+                allow_stretch: True
+                keep_ratio: True
+                pos_hint: {"center_x": 0.50}
+
+        MDLabel:
+            text: "Customer Orders Dashboard"
+            halign: "center"
+            font_style: "H6"
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        ScrollView:
+            MDBoxLayout:
+                id: orders_list
+                orientation: 'vertical'
+                spacing: "10dp"
+                size_hint_y: None
+                height: self.minimum_height
+
